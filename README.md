@@ -1,6 +1,6 @@
 Example Voting (Instavote) App
 =========
-
+By @Manuh
 Getting started
 ---------------
 
