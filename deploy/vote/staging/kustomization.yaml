@@ -25,7 +25,7 @@ commonAnnotations:
 
 
 
-configMapGenerator:
-  - name: vote
-    envs:
-      - options.env
+#configMapGenerator:
+#  - name: vote
+#    envs:
+#      - options.env
