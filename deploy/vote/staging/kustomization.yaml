@@ -24,13 +24,13 @@ commonAnnotations:
   supported-by: "dandy@sre.com"
 
 
-configMapGenerator:
-  - name: vote
-    literals:
-      - OPTION_A=FluxCD
-      - OPTION_B=ArgoCD
-
 #configMapGenerator:
 #  - name: vote
-#    envs:
-#      - options.env
+#    literals:
+#      - OPTION_A=FluxCD
+#      - OPTION_B=ArgoCD
+
+configMapGenerator:
+  - name: vote
+    envs:
+      - options.env
