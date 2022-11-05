@@ -21,9 +21,14 @@ commonLabels:
   env: staging
 
 commonAnnotations:
-  supported-by: 'dandy@sre.com'
+  supported-by: "dandy@sre.com"
 
 
+configMapGenerator:
+  - name: vote
+    literals:
+      - OPTION_A=STAGING
+      - OPTION_B=DEV
 
 #configMapGenerator:
 #  - name: vote
