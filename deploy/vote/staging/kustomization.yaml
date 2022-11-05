@@ -24,13 +24,8 @@ commonAnnotations:
   supported-by: 'dandy@sre.com'
 
 
+
 configMapGenerator:
   - name: vote
-    literals:
-      - OPTION_A=STAGING
-      - OPTION_B=DEV
-
-#configMapGenerator:
-#  - name: vote
-#    envs:
-#      - options.env
+    envs:
+      - options.env
