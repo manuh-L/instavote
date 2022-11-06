@@ -31,6 +31,6 @@ commonAnnotations:
 #      - OPTION_B=ArgoCD
 
 configMapGenerator:
-  - name: vote
+  - name: vote-options
     envs:
       - options.env
