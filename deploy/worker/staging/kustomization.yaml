@@ -11,7 +11,7 @@ replicas:
 
 images:
   - name: schoolofdevops/worker
-    newTag: v4
+    newTag: v2
 
 namespace: instavote
 
