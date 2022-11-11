@@ -9,10 +9,8 @@ spec:
   selector:
     matchLabels:
       app: worker
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: worker
         tier: back
@@ -20,4 +18,3 @@ spec:
       containers:
       - image: schoolofdevops/worker:latest
         name: worker
-        resources: {}
