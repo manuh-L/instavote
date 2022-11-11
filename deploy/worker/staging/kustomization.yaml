@@ -9,6 +9,10 @@ replicas:
   - name: worker
     count: 1
 
+images:
+  - name: schoolofdevops/worker
+    newTag: v4
+
 namespace: instavote
 
 commonLabels:
