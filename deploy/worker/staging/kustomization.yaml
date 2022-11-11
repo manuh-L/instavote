@@ -11,14 +11,7 @@ replicas:
 
 images:
   - name: schoolofdevops/worker
-    newTag: latest
 
 namespace: instavote
 
-commonLabels:
-  project: instavote
-  env: staging
-
-commonAnnotations:
-  supported-by: "dandy@sre.com"
 
