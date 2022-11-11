@@ -4,3 +4,13 @@ resources:
 - ../base
 patchesStrategicMerge:
 - deployment.yaml
+
+replicas:
+  - name: worker
+    count: 1
+
+namespace: instavote
+
+commonLabels:
+  project: instavote
+  env: staging
