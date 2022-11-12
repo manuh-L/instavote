@@ -7,7 +7,7 @@ patchesStrategicMerge:
 
 replicas:
   - name: worker
-    count: 4
+    count: 1
 
 images:
   - name: schoolofdevops/worker
