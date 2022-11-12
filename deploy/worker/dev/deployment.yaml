@@ -7,19 +7,9 @@ metadata:
     tier: front
   name: worker
 spec:
-  replicas: 4
-  selector:
-    matchLabels:
-      app: worker
-  strategy: {}
+  replicas: 3
   template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: worker
-        tier: front
     spec:
       containers:
       - image: schoolofdevops/worker:latest
         name: worker
-        resources: {}
