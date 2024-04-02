@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: vote
     tier: front
@@ -14,12 +13,11 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: vote
         tier: front
     spec:
       containers:
-      - image: schoolofdevops/vote:v1
+      - image: nhiuana/vote:0.1
         name: vote
         resources: {}

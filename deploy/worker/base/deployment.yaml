@@ -20,6 +20,6 @@ spec:
         tier: front
     spec:
       containers:
-      - image: schoolofdevops/worker:latest
+      - image: nhiuana/worker:master
         name: worker
         resources: {}
