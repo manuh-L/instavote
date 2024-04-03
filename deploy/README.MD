@@ -19,17 +19,17 @@ kubectl create namespace ivote
 
 2. Deploy Redis
 #Deploy Redis using the provided manifests:
-kubectl apply -f deploy/redis/base/deployment.yaml -n ivote
-kubectl apply -f deploy/redis/base/service.yaml -n ivote
+kubectl apply -f redis/base/deployment.yaml -n ivote
+kubectl apply -f redis/base/service.yaml -n ivote
 
 3. Deploy Vote UI
 #Deploy the voting UI component:
-kubectl apply -f deploy/vote/base/deployment.yaml -n ivote
-kubectl apply -f deploy/vote/base/service.yaml -n ivote
+kubectl apply -f vote/base/deployment.yaml -n ivote
+kubectl apply -f vote/base/service.yaml -n ivote
 
 4. Deploy Worker
 #Deploy the worker component:
-kubectl apply -f deploy/worker/base/deployment.yaml -n ivote
+kubectl apply -f worker/base/deployment.yaml -n ivote
 
 ######################## HELM #####################################
 
@@ -37,7 +37,7 @@ kubectl apply -f deploy/worker/base/deployment.yaml -n ivote
 #You have two options for deploying the result UI:
 
 Option 1: Using the Provided Chart
-helm install result ./deploy/charts/result -n ivote
+helm install result ./charts/result -n ivote
 
 Option 2: Creating a New Helm Chart
 #If you prefer to create a new Helm chart and configure it:
@@ -62,7 +62,7 @@ Option 1: Using Set Parameters
 helm install db lfs269/postgres --set settings.authMethod=trust,service.name=db -n ivote
 
 Option 2: Using a Custom Values File
-helm install db lfs269/postgres -f deploy/db/db.yaml -n ivote
+helm install db lfs269/postgres -f db/db.yaml -n ivote
 
 #Verify the Deployment, Check the status of the deployed pods in the ivote namespace:
 kubectl get po -n ivote
